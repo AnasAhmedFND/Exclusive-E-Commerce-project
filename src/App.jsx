@@ -1,17 +1,32 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
-import Hedar from './Components/Hedar'
+
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
+import Rootlayout from './Components/Rootlayout/Rootlayout'
+import Home from './Components/Pageas/Home'
+import About from './Components/Pageas/About'
 
 function App() {
-  const [count, setCount] = useState(0)
+ let myRouter = createBrowserRouter(
+  createRoutesFromElements(
+    <Route element={<Rootlayout/> } >
+      <Route path='/' element={<Home/>} />
+      <Route path='/about' element={<About/>} />
+
+    </Route>
+
+  )
+ )
 
   return (
     <>
-      <Hedar/>
+    <RouterProvider router={myRouter}/>
+
     </>
   )
+
+
 }
 
 export default App
