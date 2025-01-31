@@ -7,14 +7,16 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <div className='container mx-auto flex align-middle  justify-between py-5 items-center'>
-            <h2 className='font-bold text-2xl  py-2'>Exclusive</h2>
+        <div className='container mx-auto md:flex align-middle  py-5 items-center px-2'>
+            <h2 className='font-bold text-2xl  py-2 w-[25%] '>Exclusive</h2>
 
-            <ul className='flex gap-10 align-middle py-2'>
-                <li className='hover:border-b '><Link to='/'>Home</Link> </li>
-                <li className='hover:border-b '>Contact</li>
-                <li className='hover:border-b '><Link to='/about'>About</Link> </li>
-                <li className='hover:border-b '>Sign Up</li>
+            <div className="md:flex md:flex-row flex flex-col-reverse md:justify-between  w-[75%]">
+
+            <ul className='md:flex gap-10  py-2'>
+                <li className='md:hover:border-b '><Link to='/'>Home</Link> </li>
+                <li className='md:hover:border-b '>Contact</li>
+                <li className='md:hover:border-b '><Link to='/about'>About</Link> </li>
+                <li className='md:hover:border-b '>Sign Up</li>
 
             </ul>
             <div className="flex text-center gap-4">
@@ -29,6 +31,7 @@ const Navbar = () => {
 
                 </div>
 
+            </div>
             </div>
         </div>
     )

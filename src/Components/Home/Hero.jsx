@@ -3,8 +3,8 @@ import { FaArrowRight } from "react-icons/fa";
 
 const Hero = () => {
     return (
-        <div className='border-t container mx-auto flex justify-between'>
-            <div className="w-[29%] border-r pt-5">
+        <div className='border-t container mx-auto md:flex justify-between px-2'>
+            <div className="md:w-[29%] md:border-r pt-5">
                 <ul className='flex flex-col gap-4'>
                     <li>
                         <select name="Wom" id="Wom">
@@ -31,7 +31,7 @@ const Hero = () => {
                 </ul>
             </div>
 
-            <div className="w-[68%] mt-5 bg-black text-white pl-8 ">
+            <div className="md:w-[68%] mt-5 bg-black text-white pl-8 md:py-0 py-4 ">
                 <div className="">
                     <div className="mt-8">
                     <p>iPhone 14 Series</p>
